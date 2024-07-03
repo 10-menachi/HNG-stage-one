@@ -3,10 +3,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
-    <h2>HELLOOOOO</h2>
+    <div class="content">
+      <section class="left">
+        <img
+          data-testid="slackProfilePicture"
+          src="images/slackprofilepic.png"
+          alt="Slack Profile Picture"
+        />
+      </section>
+
+      <section class="right">
+        <p class="username">
+          Hi, i'm <span data-testid="slackDisplayName">chrisdroid</span>
+        </p>
+        <p class="email">
+          Email: <span data-testid="slackEmail">timberwamalwa@yahoo.com</span>
+        </p>
+        <p class="time">
+          Time: <span data-testid="currentTimeUTC" class="time-span"></span>
+        </p>
+        <p class="day">
+          Day: <span data-testid="currentDay" class="day-span"></span>
+        </p>
+        <div class="useful-links">
+          <h3>Useful Links:</h3>
+          <ul class="link-list">
+            <li>
+              Apply to HNG
+              <a data-testid="hngLink" href="http://hng.tech/learn">here</a>
+            </li>
+            <li>
+              Do your keywords research
+              <a data-testid="keywordLink" href="http://keyword.dog">here</a>
+            </li>
+            <li>
+              Scrape data from any website
+              <a data-testid="scrapeanywebLink" href="http://scrapeanyweb.site"
+                >here</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="achievement-cards">
+        <div class="card"></div>
+      </section>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

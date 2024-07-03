@@ -1,3 +1,89 @@
-body {
-  background: red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  background-color: #eeeeee;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  margin: 3rem;
+  gap: 10rem;
+  flex-wrap: wrap-reverse;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.username,
+.time,
+.day,
+.email {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #222831;
+  cursor: pointer;
+}
+
+.username span,
+.time span,
+.day span,
+.email span {
+  color: #f05454;
+  position: relative;
+  display: inline-block;
+}
+
+.username span::after,
+.time span::after,
+.day span::after,
+.email span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.username span:hover::after,
+.time span:hover::after,
+.day span:hover::after,
+.email span:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.useful-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+.link-list {
+  margin-left: 3rem;
+}
+
+li {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #222831;
+}
+
+a {
+  text-decoration: none;
+  color: #f05454;
 }
